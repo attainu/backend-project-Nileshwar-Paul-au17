@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "An Ecommerce Web Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attainu/backend-project-Nileshwar-Paul-au17.git"
+  },
+  "author": "Nileshwar-Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attainu/backend-project-Nileshwar-Paul-au17/issues"
+  },
+  "homepage": "https://github.com/attainu/backend-project-Nileshwar-Paul-au17#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
