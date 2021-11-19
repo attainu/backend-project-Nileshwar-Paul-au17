@@ -1,5 +1,5 @@
 import  {Box , Button , makeStyles , Typography ,Badge} from '@material-ui/core'
-
+import {Link} from 'react-router-dom'
 import { ShoppingCart } from '@material-ui/icons';
 
 const useStyle = makeStyles({
@@ -17,13 +17,14 @@ const useStyle = makeStyles({
         color:'#ffffff',
         display: 'flex',
         alignItems: 'center',
-        '& > *':{
+        '& > *':{       //applying css to child elements
             marginRight:50
         }
     },
     container:{
-        display:'flex'
-
+        display:'flex',
+        textDecoration:'none',
+        color:'#ffffff'
     }
 })
 const HeaderButtons = () => {
@@ -33,12 +34,12 @@ const HeaderButtons = () => {
             <Button className={classes.login}>Login</Button>
             <Typography>More</Typography>
             
-            <Box className={classes.container}>
+            <Link to='/cart' className={classes.container}>
             <Badge badgeContent={4} color="primary">
                 <ShoppingCart/> 
             </Badge>
             <Typography style={{marginLeft:10}} >Cart</Typography>
-            </Box>
+            </Link>
 
         </Box>
     )

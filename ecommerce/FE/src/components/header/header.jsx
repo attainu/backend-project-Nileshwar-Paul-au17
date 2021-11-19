@@ -1,4 +1,5 @@
-import {AppBar , Toolbar , makeStyles,Box} from '@material-ui/core'
+import {AppBar , Toolbar , makeStyles} from '@material-ui/core'
+import {Link} from 'react-router-dom'
 
 import SearchBar from './searchbar'
 import HeaderButtons from './custombuttons'
@@ -10,7 +11,9 @@ const useStyle = makeStyles(theme => ({
         position:'fixed'
     },
     component: {
-        marginLeft:'10%'
+        marginLeft:'10%',
+        textDecoration: 'none',
+        color: 'white'
     }
 }));
 
@@ -21,9 +24,9 @@ const Header = () => {
     return(
         <AppBar className={classes.header}>
             <Toolbar>
-                <Box className={classes.component}>
-                <h3>E-Commerce</h3> 
-                </Box>
+                <Link to='/' className={classes.component}>
+                <h2>E-Commerce</h2> 
+                </Link>
                 <SearchBar />
                 <HeaderButtons />
         

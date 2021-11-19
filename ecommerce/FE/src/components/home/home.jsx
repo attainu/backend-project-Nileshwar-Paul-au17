@@ -1,8 +1,17 @@
-import Carousel from 'react-material-ui-carousel';
+import {BrowserRouter , Routes , Route} from 'react-router-dom';
+import {makeStyles,Box} from '@material-ui/core'
 import Banner from './banner';
+import Slide from './slide';
 const Home = () => {
     return(
-        <Banner />
+        <Box>
+         <Banner />
+        <Slide/>
+    
+        <Slide/>
+        </Box>
+
+       
     )
    
 }
