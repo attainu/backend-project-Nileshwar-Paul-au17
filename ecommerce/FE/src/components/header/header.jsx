@@ -7,8 +7,7 @@ const useStyle = makeStyles(theme => ({
     header: {
         background: '#2874f0',
         height: 60,
-        
-
+        position:'fixed'
     },
     component: {
         marginLeft:'10%'
