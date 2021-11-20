@@ -1,7 +1,9 @@
 import  {Box , Button , makeStyles , Typography ,Badge} from '@material-ui/core'
 import {Link} from 'react-router-dom'
 import { ShoppingCart } from '@material-ui/icons';
+import {useStates} from 'react';
 
+import LoginDialog from '../login/login.jsx';
 const useStyle = makeStyles({
     login:{
         backgroundColor: '#ffffff',
@@ -40,6 +42,9 @@ const HeaderButtons = () => {
             </Badge>
             <Typography style={{marginLeft:10}} >Cart</Typography>
             </Link>
+            <LoginDialog>
+
+            </LoginDialog>
 
         </Box>
     )
