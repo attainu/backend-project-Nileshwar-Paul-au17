@@ -5,7 +5,7 @@ import cors from 'cors';
 
 import Connection from './database/db.js'; 
 import DefaultData from './default.js'
-import Routes from './routes/router.js';
+import Routes from './routes/routes.js';
 
 const app = express();
 
@@ -21,10 +21,11 @@ app.use(bodyParser.json({ extended: true })); //parsing signup/login data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors()); //to handle cors key error
 
-app.use('/',Routes)
+
 app.listen(PORT , () => {
     console.log(`Server Started at PORT number ${PORT}`)
 })   
+app.use('/',Routes)
 Connection(username, password);
 
 DefaultData();

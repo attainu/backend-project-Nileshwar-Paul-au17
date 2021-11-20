@@ -1,54 +1,4 @@
-// import { Dialog, DialogContent, makeStyles, Box, Typography, TextField,Button } from '@material-ui/core'
-// const useStyle = makeStyles({
-//     component: {
-//         width: '90vh',
-//         height: '100vh',
-//         padding: "0"
 
-//     },
-//     image: {
-//         backgroundImage: `url(${`https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png`})`,
-//         background: '#2874f0',
-//         backgroundPosition: 'center 85%',
-//         backgroundRepeat: 'no-repeat',
-//         height: '85vh',
-//         width: '40%',
-//         padding: '45px 50px',
-//         '& > *': {
-//             color: '#FFFFFF',
-//             fontWeight: 600
-//         }
-//     }
-// });
-// const LoginDialog = ({ open, setOpen }) => {
-//     const classes = useStyle()
-//     const handleClose = () => {
-//         setOpen(false)
-//     }
-//     return (
-//         <Dialog open={open} onClose={handleClose}  >
-//             <DialogContent className={classes.component}>
-
-//                 <Box style={{display:'flex',flexDirection:'row'}}>
-//                     <Box className={classes.image}>
-//                         <Typography varient="h5">LogIn</Typography>
-//                         <Typography style={{ marginTop: 10 }}>Get Access to your Order,Wishlist & Recomendation</Typography>
-//                     </Box>
-//                     <TextField />
-//                     <TextField />
-//                     <Typography>By Continuing You are Agree to Our Terms & Conditions </Typography>
-//                     <Button>LogIn</Button>
-//                     <Typography>Or</Typography>
-//                     <Button>Request OTP</Button>
-//                     <Typography>New To ECommerce ? Creat an Account</Typography>
-//                 </Box>
-//             </DialogContent>
-//         </Dialog>
-//     )
-
-// } 
-
-// export default LoginDialog;
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogContent, TextField, Box, Button, makeStyles, Typography } from '@material-ui/core';
 import { authenticateLogin, authenticateSignup } from '../../service/api';
@@ -144,7 +94,7 @@ const accountInitialValues = {
     }
 }
 
-const LoginDialog = ({ open, setOpen, setAccount }) => {
+const LoginDialog = ({ open, setOpen ,setAccount}) => {
     const classes = useStyle();
     const [ login, setLogin ] = useState(loginInitialValues);
     const [ signup, setSignup ] = useState(signupInitialValues);
