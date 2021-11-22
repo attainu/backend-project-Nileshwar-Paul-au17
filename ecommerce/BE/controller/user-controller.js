@@ -5,12 +5,12 @@ export const userLogIn = async (request, response) => {
     try {
         let user = await User.findOne({ username: request.body.username, password: request.body.password });
         if (user) {
-            return response.status(200).json(message, `${request.body.username} login successfull`);
+            return response.status(200).json({message: `${request.body.username} loged successfull`});
         } else {
             return response.status(401).json(message, 'Invalid Login');
         }
     } catch (error) {
-        response.json(Error, error.message);
+        response.json({Error: error.message});
     }
 }
 export const userSignUp = async (request, response) => {
