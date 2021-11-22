@@ -25,8 +25,10 @@ app.use(cors()); //to handle cors key error
 app.listen(PORT , () => {
     console.log(`Server Started at PORT number ${PORT}`)
 })   
-app.use('/',Routes)
+
 Connection(username, password);
 
 DefaultData();
+
+app.use('/',Routes)
 

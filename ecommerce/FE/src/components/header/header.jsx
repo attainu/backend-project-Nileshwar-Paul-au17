@@ -25,7 +25,7 @@ const Header = () => {
         <AppBar className={classes.header}>
             <Toolbar>
                 <Link to='/' className={classes.component}>
-                <h2>E-Commerce</h2> 
+                <h2>eCommerce</h2> 
                 </Link>
                 <SearchBar />
                 <HeaderButtons />
