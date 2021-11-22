@@ -5,10 +5,12 @@ import  Header from './components/header/header.jsx';
 import Home from './components/home/home.jsx';
 import Cart from './components/cart/cart.jsx';
 import Templateprovider from './template/templateprovider.jsx';
+import {ContextProvider} from './context/contextProvider.jsx';
 function App() {
   return (
     
     <Templateprovider>
+      <ContextProvider>
       <BrowserRouter>
       <Header/>
         <Routes>
@@ -18,6 +20,7 @@ function App() {
         </Route>
         </Routes>
       </BrowserRouter>
+      </ContextProvider>
     </Templateprovider>
    
   )
