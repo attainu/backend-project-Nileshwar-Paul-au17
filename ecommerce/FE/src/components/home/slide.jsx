@@ -2,7 +2,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {makeStyles,Typography,Box} from '@material-ui/core'
-import {products }from "../../constants/data.js";
+
 
 const responsive = {
     superLargeDesktop: {
@@ -37,7 +37,7 @@ const useStyle = makeStyles({
        
     }
 })
-const Slide = () =>{
+const Slide = ({products}) =>{
     const classes =useStyle()
     return(
         <Carousel responsive={responsive} infinite={true}
