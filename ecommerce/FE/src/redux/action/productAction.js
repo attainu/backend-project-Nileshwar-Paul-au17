@@ -21,7 +21,7 @@ import axios from 'axios';
 export const getProducts = () => async (dispatch) => {
     try {
         
-        const { data } = await axios.get(`/products`);
+        const { data } = await axios.get(`https://localhost:4000/products`);
         dispatch({ type: actionTypes.GET_PRODUCTS_SUCCESS, payload: data });
 
     } catch (error) {
