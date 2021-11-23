@@ -4,7 +4,7 @@ import Banner from './banner';
 import Slide from './slide';
 import {useSelector , useDispatch} from 'react-redux';
 import {useEffect} from 'react'
-import {products }from "../../constants/data.js";
+import {productsHC }from "../../constants/data.js";
 import  listProducts  from '../../redux/action/productAction.js';
 const Home = () => {
 
@@ -20,10 +20,9 @@ const Home = () => {
         <Box>
             <Divider/>
             <Banner />
+            
             <Divider/>
-            <Slide
-            products={products}
-            />
+            <Slide products={products}/>
         </Box>  
     )
 }

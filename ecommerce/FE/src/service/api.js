@@ -1,4 +1,5 @@
 import axios from 'axios';
+axios.defaults.withCredentials=true;
 
 const url = 'http://localhost:4000';
 
