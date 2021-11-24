@@ -1,13 +1,11 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
-import session from 'express-session';
 
 import Connection from './database/db.js'; 
 import DefaultData from './default.js'
 import Routes from './routes/routes.js';
-
+import session from 'express-session';
 const app = express();
 
 dotenv.config()
@@ -20,18 +18,22 @@ console.log(password)
 
 app.use(bodyParser.json({ extended: true })); //parsing signup/login data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors()); //to handle cors key error
+// app.use(cors()); //to handle cors key error
 
 const myRegister = new session.MemoryStore();
 const timelimit = 10000;
 
-
+app.set('trust proxy', 1)
 app.use(session({
     secret: "HELLO",
     saveUninitialized: true,
     resave: false,
     store: myRegister,
-    cookie: { maxAge: timelimit }
+    cookie: { 
+        sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax', // must be 'none' to enable cross-site delivery
+        secure: process.env.NODE_ENV === "production", // must be true if sameSite='none'
+        maxAge: timelimit
+    }
 }))
 
 app.listen(PORT , () => {
@@ -40,7 +42,6 @@ app.listen(PORT , () => {
 
 Connection(username, password);
 
-DefaultData();
+//DefaultData();
 
-app.use('/',Routes)
-
+app.use('/api',Routes)

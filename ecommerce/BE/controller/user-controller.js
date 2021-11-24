@@ -1,7 +1,8 @@
 
-
 import User from '../model/userSchema.js';
-export const userLogIn = async (request, response) => {
+import router from '../routes/routes.js'
+
+export const userLogIn = async (request,response) => {
     try {
         let user = await User.findOne({ username: request.body.username, password: request.body.password });
         if (user != null ) {
@@ -15,7 +16,16 @@ export const userLogIn = async (request, response) => {
             return response.status(401).json({message: 'Invalid Login'});
         }
     } catch (error) {
-        response.json({Error: error.message});
+        response.send({error: error.message});
+    }
+}
+function checkLoggedIn(request, response,next){
+    console.log('checkloggedin function')
+    
+    if(request.query.username){
+        next()
+    }else{
+        router.post('/login', userLogIn);
     }
 }
 export const userSignUp = async (request, response) => {
