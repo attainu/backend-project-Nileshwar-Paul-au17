@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import session from 'express-session';
 
 import Connection from './database/db.js'; 
 import DefaultData from './default.js'
@@ -20,6 +21,7 @@ console.log(password)
 app.use(bodyParser.json({ extended: true })); //parsing signup/login data
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors()); //to handle cors key error
+
 const myRegister = new session.MemoryStore();
 const timelimit = 10000;
 
