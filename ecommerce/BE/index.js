@@ -19,7 +19,7 @@ console.log(password)
 
 app.use(bodyParser.json({ extended: true })); //parsing signup/login data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors()); //to handle cors key error
+// app.use(cors()); //to handle cors key error
 const myRegister = new session.MemoryStore();
 const timelimit = 10000;
 
@@ -40,5 +40,4 @@ Connection(username, password);
 
 //DefaultData();
 
-app.use('/',Routes)
-
+app.use('/api',Routes)
