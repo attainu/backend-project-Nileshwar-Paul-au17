@@ -1,7 +1,7 @@
 import axios from 'axios';
 axios.defaults.withCredentials=true;
 
-const url = 'http://localhost:4000';
+
 
 export const authenticateLogin = async (user) => {
     try {
@@ -14,7 +14,7 @@ export const authenticateLogin = async (user) => {
 export const authenticateSignup = async (user) => {
     try { 
       
-        return await axios.post(`${url}/signup`, user)
+        return await axios.post(`api/signup`, user)
     } catch (error) {
         console.log('error while calling Signup API: ', error);
     }
@@ -22,7 +22,7 @@ export const authenticateSignup = async (user) => {
 
 export const getProductById = async (id) => {
     try {
-        return await axios.get(`${url}/product/${id}`);
+        return await axios.get(`api/product/${id}`);
     } catch (error) {
         console.log('Error while getting product by id response', error);
     }
@@ -43,13 +43,3 @@ export const getProductById = async (id) => {
 
 
 
-export  const payUsingPaytm = async (data) => {
-    try {
-        console.log('payment api');
-        let response = await axios.post(`${url}/payment`, data);
-        console.log(response.data);
-        return response.data;
-    } catch (error) {
-        console.log('error', error);
-    }
-}

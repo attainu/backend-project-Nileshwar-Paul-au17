@@ -1,10 +1,6 @@
-import express from 'express';
 
 import User from '../model/userSchema.js';
 import router from '../routes/routes.js'
-
-
-
 
 export const userLogIn = async (request,response) => {
     try {
