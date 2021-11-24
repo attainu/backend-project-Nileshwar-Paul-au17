@@ -23,13 +23,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const myRegister = new session.MemoryStore();
 const timelimit = 10000;
 
-
+app.set('trust proxy', 1)
 app.use(session({
     secret: "HELLO",
     saveUninitialized: true,
     resave: false,
     store: myRegister,
-    cookie: { maxAge: timelimit }
+    cookie: { 
+        sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax', // must be 'none' to enable cross-site delivery
+        secure: process.env.NODE_ENV === "production", // must be true if sameSite='none'
+        maxAge: timelimit
+    }
 }))
 
 app.listen(PORT , () => {
