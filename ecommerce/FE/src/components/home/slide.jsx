@@ -40,8 +40,8 @@ const useStyle = makeStyles({
 const Slide = ({ products }) => {
   const classes = useStyle()
   return (
-    <>
-    
+    <Carousel responsive={responsive} >
+  
      {
       products.map(product => (
         <Link  key = {product.id} to={`/product/${product.id}`}>
@@ -57,7 +57,7 @@ const Slide = ({ products }) => {
 
       ))
     }
-    </>
+    </Carousel>
   )
 }
 export default Slide;

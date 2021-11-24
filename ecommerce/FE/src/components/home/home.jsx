@@ -20,7 +20,6 @@ const Home = () => {
         <Box>
             <Divider/>
             <Banner />
-            
             <Divider/>
             <Slide products={products}/>
         </Box>  
