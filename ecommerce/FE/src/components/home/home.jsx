@@ -5,7 +5,7 @@ import Slide from './slide';
 import {useSelector , useDispatch} from 'react-redux';
 import {useEffect} from 'react'
 import {productsHC }from "../../constants/data.js";
-import  listProducts  from '../../redux/action/productAction.js';
+import  {getProducts as listProducts}  from '../../redux/action/productAction.js';
 const Home = () => {
 
     const getProducts = useSelector(state => state.getProducts)

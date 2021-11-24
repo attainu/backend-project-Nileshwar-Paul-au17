@@ -14,6 +14,7 @@ export const userLogIn = async (request,response) => {
             return response.status(200).json({message: `${request.body.username} loged successfull`});
         } else {
             return response.status(401).json({message: 'Invalid Login'});
+               
         }
     } catch (error) {
         response.send({error: error.message});

@@ -22,7 +22,7 @@ export const authenticateSignup = async (user) => {
 
 export const getProductById = async (id) => {
     try {
-        return await axios.get(`api/product/${id}`);
+        return await axios.get(`api/products/${id}`);
     } catch (error) {
         console.log('Error while getting product by id response', error);
     }
