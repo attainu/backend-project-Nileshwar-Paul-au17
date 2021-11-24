@@ -1,7 +1,8 @@
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { makeStyles, Typography, Box, Link } from '@material-ui/core'
+import { makeStyles, Typography, Box } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 
 const responsive = {
