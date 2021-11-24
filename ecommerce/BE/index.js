@@ -1,8 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
-import session from 'express-session';
 
 import Connection from './database/db.js'; 
 import DefaultData from './default.js'
