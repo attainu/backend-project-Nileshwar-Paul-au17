@@ -9,7 +9,7 @@ export const bannerData = [
     'https://rukminim1.flixcart.com/flap/3376/560/image/f6202f13b6f89b03.jpg?q=50'
 ];
 
-export const products = [
+export const productsHC = [
     { 
         id: 'product1',
         url: 'https://rukminim1.flixcart.com/image/150/150/kapoo7k0/electric-kettle/p/6/s/pigeon-favourite-original-imafs7xhj5uwgrh4.jpeg?q=70', 
