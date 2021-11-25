@@ -11,7 +11,7 @@ export const userLogIn = async (request,response) => {
             request.session.loggedIn = true
             console.log(request.session)
             console.log(request.body)
-            return response.status(200).json({message: `${request.body.username} loged successfull`});
+            return response.status(200).json({message: `${request.body.username} logged successfull`});
         } else {
             return response.status(401).json({message: 'Invalid Login'});
                
