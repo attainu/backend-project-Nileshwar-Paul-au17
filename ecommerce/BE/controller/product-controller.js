@@ -9,7 +9,7 @@ export const getProducts = async (request ,response) => {
     }
  }
  export const getProductsById = async (request , response) => {
-    console.log(request.params.id)
+    //console.log(request.params.id)
     try {
         const product_response = await Productsdata.findOne({'id':request.params.id})
         console.log(product_response)
