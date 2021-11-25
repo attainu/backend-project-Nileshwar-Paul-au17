@@ -37,7 +37,7 @@ export const DetailView = () => {
         <Box className={classes.component}>
             <Box className={classes.container}>
                 <Box style={{ minWidth: '40%',textAlign:'center' }}>
-                    <img src={product.url} style={{width:200,height:200}}></img>
+                    <img src={product.detailUrl} style={{width:300,height:300}}></img>
                     <Typography style={{fontWeight: 'bold'}}>{product.tagline}</Typography>
                     <Typography style={{fontWeight: 'bold',color:'green'}}>{product.discount}</Typography>
                 </Box>

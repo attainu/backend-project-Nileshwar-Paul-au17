@@ -43,5 +43,22 @@ app.listen(PORT , () => {
 Connection(username, password);
 
 //DefaultData();
-
 app.use('/api',Routes)
+
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
+
+// console.log(`🚀 ~ import.meta.url`, import.meta.url)
+const __fileName = fileURLToPath(import.meta.url)
+const __dirname = dirname(__fileName)
+console.log(`🚀 ~ __dirname`, __dirname)
+
+
+const buildFolderPath = resolve(__dirname, '../FE/build') 
+console.log(`🚀 ~ buildFolderPath`, buildFolderPath)
+
+app.use(express.static(buildFolderPath))
+app.get("*", (req, res) => {
+    res.sendFile(`${buildFolderPath}/index.html`)
+})
+
