@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd BE && npm start"
+    "start": "cd BE && npm install && npm start"
   },
   "repository": {
     "type": "git",
