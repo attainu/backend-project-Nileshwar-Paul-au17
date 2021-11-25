@@ -20,15 +20,7 @@ export const userLogIn = async (request,response) => {
         response.send({error: error.message});
     }
 }
-function checkLoggedIn(request, response,next){
-    console.log('checkloggedin function')
-    
-    if(request.query.username){
-        next()
-    }else{
-        router.post('/login', userLogIn);
-    }
-}
+
 export const userSignUp = async (request, response) => {
     try {
         console.log(request.body)
@@ -41,7 +33,7 @@ export const userSignUp = async (request, response) => {
         await newUser.save();
         response.status(200).json({message: 'user has been successfully registered'});
     } catch (error) {
-        response.json({Error:error.message});
+        response.json({skdvcodsc});
     }
 }
 
