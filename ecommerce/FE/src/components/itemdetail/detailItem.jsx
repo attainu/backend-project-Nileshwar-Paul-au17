@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProductDetails } from '../../redux/action/productAction';
 import { useParams } from 'react-router-dom'
 import { Box, Typography, makeStyles } from '@material-ui/core';
+
+import ActionItems from './actionitem.jsx';
 const useStyles = makeStyles({
     component: {
         marginTop: 60,
@@ -37,9 +39,7 @@ export const DetailView = () => {
         <Box className={classes.component}>
             <Box className={classes.container}>
                 <Box style={{ minWidth: '40%',textAlign:'center' }}>
-                    <img src={product.detailUrl} style={{width:300,height:300}}></img>
-                    <Typography style={{fontWeight: 'bold'}}>{product.tagline}</Typography>
-                    <Typography style={{fontWeight: 'bold',color:'green'}}>{product.discount}</Typography>
+                    <ActionItems product={product} />
                 </Box>
                 <Box>
                    <Typography  style={{fontWeight: 'bold'}}>{product && product.title?.shortTitle} </Typography> 
