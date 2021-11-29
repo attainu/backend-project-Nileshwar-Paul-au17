@@ -6,7 +6,7 @@ export const cartReducer = (state = { cartItems: []}, action) => {
         case actionTypes.ADD_TO_CART:
            
             //console.log("item.id",item.id)
-            const existItem = state.cartItems.find(product => product.id === item.product.id);
+            const existItem = state.cartItems.find(product => product.product.id === item.product.id);
             // console.log(existItem)
             // console.log(item);
             // console.log(state.cartItems)
@@ -24,7 +24,7 @@ export const cartReducer = (state = { cartItems: []}, action) => {
             console.log(state.cartItems)
             console.log(action.payload);
             let s =  {
-                ...state, cartItems: state.cartItems.filter(product => product.id !== item.product)
+                ...state, cartItems: state.cartItems.filter(product => product.product.id !== action.payload)
             }
             console.log(s);
             return s;
