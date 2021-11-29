@@ -14,10 +14,7 @@ const useStyle =makeStyles({
     addtocart:{
         backgroundColor:'#ff9f00',
     },
-    buynow:{
-        backgroundColor:'#fb641b',
-        marginLeft:10
-    }
+   
 })
 const ActionItems = ({product}) => {
         const classes = useStyle() 
@@ -35,7 +32,7 @@ const ActionItems = ({product}) => {
            
             <Button onClick = {() => additemsToCart()} variant="contained" className={clsx(classes.button,classes.addtocart)}><Cart /> Add to Cart</Button>
             
-            <Button variant="contained" className={clsx(classes.button,classes.buynow)}><Flash/> Buy Now</Button>
+           
         </>
 
        

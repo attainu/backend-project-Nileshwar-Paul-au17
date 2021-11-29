@@ -8,7 +8,9 @@ const useStyle = makeStyles({
         borderTop:'1px'
     },
     leftComponent: {
-        margin: '20px'
+        margin: '20px',
+        display: 'flex',
+        flexDirection: 'column'
     },
     rightComponent: {
         marginTop: '20px',
@@ -42,6 +44,7 @@ const CartItems = ({ items,removeItemFromCart }) => {
         <Card className={classes.component}>
             <Box className={classes.leftComponent}>
                 <img src={items && items.product?.url} className={classes.img}></img>
+                
             </Box>
 
             <Box className={classes.rightComponent}>
