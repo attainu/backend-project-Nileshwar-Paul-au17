@@ -26,7 +26,7 @@ export const DetailView = () => {
     const fassured = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png'
     const product = useSelector(state => state.getProductDetailsReducer.product);
    
-    console.log(`product`, product)
+   // console.log(`product`, product)
     const dispatch = useDispatch()
     const classes = useStyles()
     const { id } = useParams()
