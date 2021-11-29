@@ -42,7 +42,7 @@ const useStyle = makeStyles({
 })
 const Cart = () =>{
     const classes = useStyle()
-    const {cartItems,} = useSelector(state => state.cart)
+    let {cartItems,} = useSelector(state => state.cart)
     useEffect(() => {
         //console.log(cartItems)
     })
@@ -53,6 +53,7 @@ const Cart = () =>{
     const path = useNavigate()
     const orderplaced = () =>{
             alert("Your Order Placed")
+           
             path('/')
     }
     return(

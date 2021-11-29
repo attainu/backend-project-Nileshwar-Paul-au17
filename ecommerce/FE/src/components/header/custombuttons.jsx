@@ -46,14 +46,10 @@ const HeaderButtons = () => {
     return (
         <Box className={classes.wrapper}>
             {   account ? <Profile account={account} setAccount={setAccount}/>:
-                
                      <Button  variant ="contained" className={classes.login} onClick={ ()=>openLoginDialog() }>Login</Button>
-                
             }
-            <Typography>More</Typography>
-            
             <Link to='/cart' className={classes.container}>
-            <Badge badgeContent={cartItems?.length} color="primary">
+            <Badge color="primary">
                 <ShoppingCart/> 
             </Badge>
             <Typography style={{marginLeft:10}} >Cart</Typography>
