@@ -19,3 +19,10 @@ export const removeFromCart = (id) => (dispatch) => {
 
    
 };
+
+export const removefromcart= (cartItems) => (dispatch) => {
+    
+    console.log("hi from here")
+    dispatch({type: actionTypes.REMOVE_FROM_CART_2,payload: cartItems.id })
+
+}

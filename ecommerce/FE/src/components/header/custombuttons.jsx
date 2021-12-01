@@ -49,7 +49,7 @@ const HeaderButtons = () => {
                      <Button  variant ="contained" className={classes.login} onClick={ ()=>openLoginDialog() }>Login</Button>
             }
             <Link to='/cart' className={classes.container}>
-            <Badge color="primary">
+            <Badge  color="primary">
                 <ShoppingCart/> 
             </Badge>
             <Typography style={{marginLeft:10}} >Cart</Typography>
