@@ -41,7 +41,15 @@ const useStyle = makeStyles({
 const Slide = ({ products }) => {
   const classes = useStyle()
   return (
-    <Carousel responsive={responsive} >
+    <Carousel   
+    responsive={responsive}
+    autoPlay={true} 
+    animation="slide" 
+    indicators={false}
+    navButtonsAlwaysVisible={true}
+    cycleNavigation={true}
+    
+    >
   
      {
       products.map(product => (
