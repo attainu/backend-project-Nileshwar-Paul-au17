@@ -114,7 +114,7 @@ const LoginDialog = ({ open, setOpen ,setAccount}) => {
         setSignup({ ...signup, [e.target.name]: e.target.value });
     }
 
-    const loginUser = async() => {
+     const loginUser = async() => {
         let response = await authenticateLogin(login);
         if(!response) 
             showError(true);
