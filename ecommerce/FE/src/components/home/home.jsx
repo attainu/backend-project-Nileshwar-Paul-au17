@@ -33,8 +33,7 @@ const Home = () => {
             position:'bottom 0',
             textAlign: 'center'
             }}>
-                All Rights Reserved
-               
+                All Rights Reserved 
             </Box>
         </Box>  
     )
