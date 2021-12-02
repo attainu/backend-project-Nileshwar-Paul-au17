@@ -34,7 +34,7 @@ export const cartReducer = (state = { cartItems: []}, action) => {
         case actionTypes.REMOVE_FROM_CART_2:
 
             let d =  {
-                ...state, cartItems: state.cartItems.filter(product => product == item2.product)
+                ...state, cartItems: state.cartItems.filter(product => product === item2.product)
             }
             console.log("hhsihdioshd")
             console.log(d);

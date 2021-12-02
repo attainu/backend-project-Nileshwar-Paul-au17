@@ -1,5 +1,5 @@
-import {Box,Typography,makeStyles,Link,Button} from '@material-ui/core';
-import { ShoppingCart as Cart, FlashOn as Flash } from '@material-ui/icons';
+import {Typography,makeStyles,Button} from '@material-ui/core';
+import { ShoppingCart as Cart} from '@material-ui/icons';
 import clsx from 'clsx';
 import {useDispatch} from 'react-redux';
 import {addToCart} from '../../redux/action/cartActions';
