@@ -1,10 +1,9 @@
 import {AppBar , Toolbar , makeStyles} from '@material-ui/core'
 import {Link} from 'react-router-dom'
-
 import SearchBar from './searchbar'
 import HeaderButtons from './custombuttons'
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles(() => ({
     header: {
         background: '#2874f0',
         height: 60,
@@ -18,9 +17,7 @@ const useStyle = makeStyles(theme => ({
 }));
 
 const Header = () => {
-
     const classes = useStyle()
-    
     return(
         <AppBar className={classes.header}>
             <Toolbar>
@@ -29,12 +26,9 @@ const Header = () => {
                 </Link>
                 <SearchBar />
                 <HeaderButtons />
-        
             </Toolbar>
-          
         </AppBar>
     )
 }
-
 export default Header;
 

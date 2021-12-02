@@ -14,7 +14,7 @@ const useStyle = makeStyles(theme => ({
     },
     image: {
         width: '100%',
-        height: 300,
+        height: 250,
 
         [theme.breakpoints.down('sm')]: {
             objectFit: 'cover',
@@ -27,7 +27,6 @@ const Banner = () => {
     const classes = useStyle();
     return (
         <Carousel 
-       
             autoPlay={true} 
             animation="slide" 
             indicators={false}

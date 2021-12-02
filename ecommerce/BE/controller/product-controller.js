@@ -12,7 +12,7 @@ export const getProducts = async (request ,response) => {
     //console.log(request.params.id)
     try {
         const product_response = await Productsdata.findOne({'id':request.params.id})
-        console.log(product_response)
+        //console.log(product_response)
         response.json({product:product_response})
     }
     catch(error){

@@ -12,14 +12,14 @@ export const TemplateProvider = ({ children }) => {
                 }
             }
         },
-        // MuiDialogContent: {
-        //     root: {
-        //         padding: 0,
-        //         '&:first-child': {
-        //             paddingTop: 0
-        //         }
-        //     }
-        // }
+        MuiDialogContent: {
+            root: {
+                padding: 0,
+                '&:first-child': {
+                    paddingTop: 0
+                }
+            }
+        }
         })
         return (
             <TemplateContext.Provider>

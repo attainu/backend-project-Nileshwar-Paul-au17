@@ -7,7 +7,6 @@ const useStyle = makeStyles({
         height: '75vh',
         background: '#fff',
         margin: '80px 140px'
-
     },
     img:{
         width:'300px',
@@ -20,7 +19,6 @@ const useStyle = makeStyles({
     btn:{
         background: '#2874f0',
         color: 'white',
-       
     },
     btncomponent:{
         display:'flex',
@@ -45,10 +43,8 @@ const EmptyCart =() => {
             <Box className={classes.btncomponent}>
             <Button className={classes.btn} onClick={() => addItem()}>Shop Now</Button>
             </Box>
-           
         </Box>
     </Box>
     )
 }
-
 export default EmptyCart;

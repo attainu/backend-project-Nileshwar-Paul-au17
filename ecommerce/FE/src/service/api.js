@@ -1,8 +1,6 @@
 import axios from 'axios';
 axios.defaults.withCredentials=true;
 
-
-
 export const authenticateLogin = async (user) => {
     try {
        
@@ -19,7 +17,6 @@ export const authenticateSignup = async (user) => {
         console.log('error while calling Signup API: ', error);
     }
 }
-
 export const getProductById = async (id) => {
     try {
         return await axios.get(`api/products/${id}`);

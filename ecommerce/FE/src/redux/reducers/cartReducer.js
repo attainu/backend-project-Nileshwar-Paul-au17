@@ -23,9 +23,9 @@ export const cartReducer = (state = { cartItems: []}, action) => {
                 return a;
             }
         case actionTypes.REMOVE_FROM_CART:
-            console.log(state.cartItems)
-            console.log(action.payload);
-            console.log("hi2")
+            // console.log(state.cartItems)
+            // console.log(action.payload);
+            // console.log("hi2")
             let s =  {
                 ...state, cartItems: state.cartItems.filter(product => product.product.id !== action.payload)
             }

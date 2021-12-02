@@ -1,10 +1,8 @@
-
 import  {Box , Button , makeStyles , Typography ,Badge} from '@material-ui/core'
 import {Link} from 'react-router-dom'
 import { ShoppingCart } from '@material-ui/icons';
 import React ,{useState,useContext} from 'react';
 import {useSelector} from 'react-redux';
-
 import LoginDialog from '../login/login.jsx';
 import {LoginContext} from '../../context/contextProvider.jsx';
 import Profile from './profile.jsx';
@@ -41,7 +39,6 @@ const HeaderButtons = () => {
        setOpen(true);
     }
     const classes = useStyle()
-
     const {cartItems} = useSelector(state => state.cart)
     return (
         <Box className={classes.wrapper}>
@@ -55,9 +52,7 @@ const HeaderButtons = () => {
             <Typography style={{marginLeft:10}} >Cart</Typography>
             </Link>
             <LoginDialog open={open} setOpen={setOpen} setAccount={setAccount} >
-
             </LoginDialog>
-
         </Box>
     )
 }

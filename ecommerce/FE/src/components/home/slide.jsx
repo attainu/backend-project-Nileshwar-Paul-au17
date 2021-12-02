@@ -48,9 +48,7 @@ const Slide = ({ products }) => {
     indicators={false}
     navButtonsAlwaysVisible={true}
     cycleNavigation={true}
-    
     >
-  
      {
       products.map(product => (
         <Link  key = {product.id} to={`/product/${product.id}`}>
@@ -59,11 +57,8 @@ const Slide = ({ products }) => {
             <Typography className={classes.text} >{product.title.shortTitle}</Typography>
             <Typography className={classes.text} style={{ color: "green" }}>{product.discount}</Typography>
             <Typography className={classes.text}>{product.tagline}</Typography>
-
           </Box>
-
         </Link>
-
       ))
     }
     </Carousel>

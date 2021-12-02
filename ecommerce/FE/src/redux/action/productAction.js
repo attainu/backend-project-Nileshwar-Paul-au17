@@ -1,5 +1,3 @@
-
-
 import * as actionTypes from '../constants/productConstant';
 import axios from 'axios';
 
