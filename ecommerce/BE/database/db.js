@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 dotenv.config()
 const dburl = process.env.DB_URL
-const Connection = async (username, password) => {
+const Connection = async (username, password) => { //this fun is used for creating connection to DB
     try {
         await mongoose.connect(dburl);
         console.log('Database Connected Succesfully');

@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
-let validateEmail = function(email) {
+let validateEmail = function(email) {           //validating email is in proper format or not given by user
     var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return re.test(email)
 };
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({            //in this schema we defined all the attributes of the user
     firstname: {
         type: String,
         required: true,
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true,
         lowercase: true,
-        validate: [validateEmail, 'Please fill a valid email address'],
+        validate: [validateEmail, 'Please fill a valid email address'], //invoking the validateEmail method
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     password: {
@@ -45,5 +45,5 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-const user = mongoose.model('user', userSchema);
+const user = mongoose.model('user', userSchema); //creating the user schema in the database
 export default user;

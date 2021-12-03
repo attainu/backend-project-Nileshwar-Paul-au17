@@ -4,12 +4,11 @@ import {getProducts,getProductsById } from '../controller/product-controller.js'
 
 const router = express.Router();
 
+//Defining all the routes
 router.post('/signup',userSignUp);
 router.post('/login', userLogIn);
 router.get('/products',getProducts);
 router.get('/products/:id',getProductsById);
-
-
 export default router;
 
 
