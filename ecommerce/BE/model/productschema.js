@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const productSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({ //in this schema we defined all the attributes of the product
     id: String,
     url: String,
     detailUrl: String,
@@ -12,5 +12,5 @@ const productSchema = new mongoose.Schema({
     tagline: String
 });
 
-const products = mongoose.model('product', productSchema);
+const products = mongoose.model('product', productSchema); // //creating the product schema in the database
 export default products;

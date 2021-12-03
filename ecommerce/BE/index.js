@@ -42,10 +42,13 @@ app.use('/api',Routes)
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
 
-// console.log(`🚀 ~ import.meta.url`, import.meta.url)
-const __fileName = fileURLToPath(import.meta.url)
+ console.log(`🚀 ~ import.meta.url`, import.meta.url)
+
+const __fileName = fileURLToPath(import.meta.url)  //we used this for (/) are correctly adjusted 
 const __dirname = dirname(__fileName)
+
 //console.log(`🚀 ~ __dirname`, __dirname)
+//console.log(`🚀 ~ __fileName`, __fileName)
 
 
 const buildFolderPath = resolve(__dirname, '../FE/build') 
