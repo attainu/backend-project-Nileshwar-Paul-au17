@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 let validateEmail = function(email) {
     var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return re.test(email)
@@ -45,5 +46,4 @@ const userSchema = new mongoose.Schema({
 });
 
 const user = mongoose.model('user', userSchema);
-
 export default user;

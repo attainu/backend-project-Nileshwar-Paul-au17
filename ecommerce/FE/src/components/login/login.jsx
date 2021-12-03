@@ -113,7 +113,6 @@ const LoginDialog = ({ open, setOpen ,setAccount}) => {
         console.log(signup); 
         setSignup({ ...signup, [e.target.name]: e.target.value });
     }
-
      const loginUser = async() => {
         let response = await authenticateLogin(login);
         if(!response) 
@@ -176,5 +175,4 @@ const LoginDialog = ({ open, setOpen ,setAccount}) => {
         </Dialog>
     )
 }
-
 export default LoginDialog;

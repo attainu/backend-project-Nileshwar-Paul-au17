@@ -13,30 +13,23 @@ const useStyle =makeStyles({
     },
     addtocart:{
         backgroundColor:'#ff9f00',
-    },
-   
+    },  
 })
 const ActionItems = ({product}) => {
         const classes = useStyle() 
         const  dispatch = useDispatch();
-        const history = useNavigate();
+        const path = useNavigate();
         const additemsToCart = () =>{
             dispatch(addToCart(product.id));
             // console.log(product.id)
-            history('/cart')
+            path('/cart')
         }
     return(
         <>  
             <img src={product && product.detailUrl} style={{width:300,height:300}} />
             <Typography style={{fontSize:20,fontWeight:'bold'}}>{product && product.title?.shortTitle}</Typography>
-           
-            <Button onClick = {() => additemsToCart()} variant="contained" className={clsx(classes.button,classes.addtocart)}><Cart /> Add to Cart</Button>
-            
-           
+            <Button onClick = {() => additemsToCart()} variant="contained" className={clsx(classes.button,classes.addtocart)}><Cart /> Add to Cart</Button>  
         </>
-
-       
     )
 }
-
 export default ActionItems;

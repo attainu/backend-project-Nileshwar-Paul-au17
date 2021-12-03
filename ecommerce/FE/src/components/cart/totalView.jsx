@@ -32,7 +32,6 @@ const useStyle = makeStyles({
     }
 })
 
-
 const TotalView = ({ cartItems }) => {
     const classes = useStyle();
     const [price, setPrice] = useState(0);
@@ -44,10 +43,7 @@ const TotalView = ({ cartItems }) => {
     
     const totalAmount = () => {
         let price = 0, discount = 0;
-        console.log(cartItems);
-      
-   
-    
+        //console.log(cartItems);   
       cartItems.map(item => {
             price += item.product.price?.mrp
             discount += (item.product.price?.mrp - item.product.price?.cost) 
@@ -55,7 +51,6 @@ const TotalView = ({ cartItems }) => {
         setPrice(price);
         setDiscount(discount);
     }
-
     return (
         <Box className={classes.component}>
             <Box className={classes.header} style={{borderBottom: '1px solid #f0f0f0'}}>
@@ -71,5 +66,4 @@ const TotalView = ({ cartItems }) => {
         </Box>
     )
 }
-
 export default TotalView;

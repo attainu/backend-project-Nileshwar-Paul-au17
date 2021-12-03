@@ -9,7 +9,6 @@ const useStyles = makeStyles({
     component: {
         marginTop: 60,
         backgroundColor: '#F2f2F2'
-
     },
     container: {
         margin: '0 80px',
@@ -19,7 +18,6 @@ const useStyles = makeStyles({
             marginTop: 50
         }
     }
-
 })
 
 export const DetailView = () => {
@@ -33,9 +31,7 @@ export const DetailView = () => {
     useEffect(() => {
         dispatch(getProductDetails(id));
     }, []);
-
-    return (
-       
+    return (  
         <Box className={classes.component}>
             <Box className={classes.container}>
                 <Box style={{ minWidth: '40%',textAlign:'center' }}>
@@ -54,9 +50,6 @@ export const DetailView = () => {
                 </Box>
             </Box>
         </Box>
-
     )
-
-
 }
 

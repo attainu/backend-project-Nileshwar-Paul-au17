@@ -28,7 +28,6 @@ const useStyle = makeStyles({
     img:{
         width:'100px',
         height:'100px',
-    
     },
     btn:{
         color:'Blue',
@@ -44,24 +43,26 @@ const CartItems = ({ items,removeItemFromCart }) => {
         <Card className={classes.component}>
             <Box className={classes.leftComponent}>
                 <img src={items && items.product?.url} className={classes.img}></img>
-                
             </Box>
-
             <Box className={classes.rightComponent}>
-               
+    
                 <Typography> {items && items.product.title?.longTitle}</Typography>
+    
                 <Typography className={clsx(classes.greyText,classes.smallText)}>Seller:CloudTailIndia</Typography>
+    
                 <span><img className={classes.logo} src={fassured}></img></span>
-                
+        
                 <Typography style={{fontSize:18,fontWeight: 'bold'}}>
+    
                     <span className={classes.greyText}> <strike>₹{items && items.product.price?.mrp}</strike></span> &nbsp;&nbsp;&nbsp;
+    
                     <span>₹{items && items.product.price?.cost}</span>&nbsp;&nbsp;&nbsp;
+    
                     <span style={{color:'green'}}>{items && items.product.price?.discount} Off</span>
-                  
+        
                     <Button className={classes.btn} onClick={() => removeItemFromCart(items.product.id)}>Remove</Button>
+    
                 </Typography> 
-                
-
             </Box>
         </Card>
     )
